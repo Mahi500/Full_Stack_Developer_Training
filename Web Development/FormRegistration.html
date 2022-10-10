@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            .register{
+                margin-top:20px;
+                margin-left:500px;
+            }
+            .form-input{
+                padding:10px;
+            }
+            .login{
+                display:block;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="form" style="border:solid black">
+       <form action=" " method="post" class="register" name="registrationform">
+        
+        <div class="form-input">
+            <label>First Name: </label>
+        <input type="text" name="firstname" value="" placeholder="enter first name" required="true"> 
+        </div>
+       
+        <div class="form-input">
+        <label>Last Name: </label>
+        <input type="text" name="lastname"  value="" placeholder="enter last name"  required="true"> 
+        </div>
+       
+        <div class="form-input">
+        <label>Email:</label>
+        <input type="email" name="email"    value="" placeholder="enter email"> 
+        </div>
+        <div class="form-input">
+        <label>Password:</label>
+        <input type="password" name="password" value="" placeholder="enter password">
+        </div>
+        
+        <div class="form-input">
+        <label>DOB:</label>
+        <input type="date" name="dob" value="">
+        </div>
+       
+        <div class="form-input">
+        <label>Photo:</label>
+        <input type="file" name="profile pic" placeholder="enter file" Max="1 MB">
+        </div>
+       
+        <div class="form-input">
+            <label>Gender:</label>
+            <input type="radio" name="Gender">
+            <label>Male</label>
+            <input type="radio" name="Gender">
+            <label>Female</label>
+        </div>
+        
+        <div class="form-input">
+            <label>Courses:</label>
+            <input type="checkbox" name="course">
+            <label>JAVA</label>
+            <input type="checkbox" nmae="course">
+            <label>PYTHON</label>
+        </div>
+        
+        <div class="form-input">
+        <label>Country:</label>
+        <select name="country">
+            <option>     </option>
+            <option value="india">INDIA</option>
+            <option value="aus">AUS</option>
+            <option value="england">ENGLAND</option>
+            <option value="usa">USA</option>
+        </select>
+        </div>
+        <div class="form-input">
+            <label>Address:</label> 
+            <textarea rows="5" col="5"></textarea>
+        </div>
+        
+        <div class="form-input">
+        <input type="submit" name="submit" value="save">
+        <input type="reset" name="reset" value="reset">
+        </div>
+         
+        
+            <h2>Already registered please</h2> 
+            <div class="login"></div>
+            <a href="login.html">Login</a> 
+            </div>
+        
+
+        </form> 
+        </div>
+    </body>
+</html>

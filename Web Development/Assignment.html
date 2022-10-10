@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Dropdown Menu
+	</title>
+
+	<style>
+		.menu .dropdown {
+			padding: 0;
+			list-style: none;
+			width: 500px;
+		}
+
+		
+		.menu .dropdown li a {
+		
+            display:inline-block;
+			padding: 5px;
+			
+		}
+
+		a{
+			padding:5px;
+		}
+
+		.menu ul.dropdown {
+			
+	         display: none;
+            
+		}
+		.menu:hover ul.dropdown {
+			display: block;
+
+			/* Display the dropdown */
+		}
+	</style>
+</head>
+
+<body>
+    <div>
+        <a href=""><img src="Logo.png" width="50px" height="50px"></a>
+
+        <a href="">Home</a>
+        <a href="">About us</a>
+        <a href="">Contactus</a>
+		<div class="menu" style="display:inline-block">
+        
+            <a href="#" style="text-decoration:none;" > Courses </a>
+
+	
+			<ul class="dropdown">
+				<li><a href="#">C++</a></li>
+				<li><a href="#">JAVA</a></li>
+				<li><a href="#">PHP</a></li>
+			</ul>
+    
+		</div>
+	
+</div>
+</body>
+
+</html>
