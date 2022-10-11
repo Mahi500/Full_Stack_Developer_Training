@@ -1,5 +1,46 @@
-h2{
+/*h2{
     color:red;
     background-color: green;
     text-align:center;
 }
+
+.labelitem{
+    display:inline-flex;
+    width:10%;
+}*/
+
+h1{
+    color:red;
+    background-color: cyan;
+}
+
+#p1{
+    color:blue;
+}
+
+#box1{
+     width:200px;
+     height:200px;
+     background-color: cyan;
+}
+
+.box2{
+
+    width: 100px;
+    height: 200px;
+    background-color: red;
+
+}
+ul > li{
+    color:red;
+    
+}
+
+*{
+    
+    margin:0;
+    padding:0;
+}
+
+
+
