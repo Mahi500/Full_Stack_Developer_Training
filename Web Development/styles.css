@@ -1,17 +1,25 @@
-/*h2{
+h2{
     color:red;
     background-color: green;
-    text-align:center;
+    
 }
 
 .labelitem{
     display:inline-flex;
     width:10%;
-}*/
+}
 
 h1{
     color:red;
     background-color: cyan;
+    font-size: 50px;
+    font-style:italic;
+    font-weight: bolder;
+    font-family: ;
+}
+.None{
+
+    display: none;
 }
 
 #p1{
@@ -35,7 +43,34 @@ ul > li{
     color:red;
     
 }
+body{
+    background-image:url(img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+h3{
+    text-align: center;
+    text-transform:capitalize;
+    word-spacing: 10px;
+    letter-spacing: 2px;
+    background-color: green;
+    font-size: 40px;
+    line-height: 49px;
+    text-decoration:underline;
+    margin: 10px;
+}
+
+a:link{
+     color:red;
+}
+
+a:visited{
+             color:green;
+}
+a:hover{
+              color:aqua;
+}
 *{
     
     margin:0;
