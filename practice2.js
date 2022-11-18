@@ -44,9 +44,3 @@ async function userandrole(){
 }
 
 userandrole();
-
-function practice(){
-
-    console.log("testing");
-
-}
