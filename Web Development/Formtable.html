@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment</title>
+        <style>
+            table,th,td,tr{
+                border: solid black 2px;
+                
+            }
+            table{
+
+                border-collapse:collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Registration form</h1>
+        <form onsubmit="savedata()">
+            <label>First Name:</label>
+            <input type="text" value=""  id="fname">
+            <label>Last Name:</label>
+            <input type="text" value=""  id="lname">
+            <label>Age</label>
+            <input type="number" value="" id="age">
+            <input type="submit" value="save">
+
+        </form>
+        <br>
+        <br>
+        <table>
+            <tr><th>First Name</th><th>Last Name</th><th>Age</th><th>Action</th></tr>
+             <tbody id="mainData" >
+
+             </tbody>
+
+        </table>
+
+    </body>
+    <script>
+        var isUpdated=false;
+        var selectedparent=null;
+        
+        function savedata(){
+                 
+
+            if(isUpdated===false){
+
+                   createNewRow();
+                
+            }
+            else{
+                   updateExistingRow();
+
+            }
+            
+             
+              
+             
+              reset();
+              
+              
+
+        }
+
+        function createNewRow(){
+
+            event.preventDefault();
+            let fname=document.getElementById("fname").value;
+            let lname=document.getElementById("lname").value;
+            let age=document.getElementById("age").value;
+            console.log(fname,lname,age);
+
+            let tableData = document.getElementById("mainData")
+            tableData.innerHTML =tableData.innerHTML+         
+            `<tr>
+                <td>${fname}</td>
+                <td>${lname}</td>
+                <td>${age}</td>
+                <td>
+                    <button onclick="editdata(this)">Edit</button>
+                    <button onclick="deletedata(this)">Delete</button>
+                </td>
+            </tr>
+             `
+        }
+        
+        function reset(){
+
+            isUpdated=false;
+            self=null;
+
+            document.getElementById("fname").value="";
+            document.getElementById("lname").value="";
+            document.getElementById("age").value="";
+        }
+        function editdata(self){
+
+              isUpdated=true;
+
+              selectedparent=self.parentElement.parentElement;
+            
+              values= self.parentElement.parentElement.textContent.split("\n");
+
+              document.getElementById("fname").value=values[1].trim();
+              document.getElementById("lname").value=values[2].trim();
+              document.getElementById("age").value=values[3].trim();
+
+
+            
+        }   
+
+        function deletedata(self){
+            
+            self.parentElement.parentElement.remove();
+
+
+        }
+        function updateExistingRow(){
+
+            let fname=document.getElementById("fname").value;
+            let lname=document.getElementById("lname").value;
+            let age=document.getElementById("age").value;
+
+            selectedparent.innerHTML=`<tr>
+                <td>${fname}</td>
+                <td>${lname}</td>
+                <td>${lname}</td>
+                <td><button onclick="editdata(this)">Edit</button><button onclick="deletedata(this)">Delete</button></td>
+
+            </tr>`    
+
+        }
+    </script>
+    
+</html>
