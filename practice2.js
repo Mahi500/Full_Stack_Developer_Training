@@ -27,6 +27,8 @@ function roleDb(){
 }
 
 
+
+
 function print(){
 console.log("hi");
 
@@ -42,3 +44,7 @@ async function userandrole(){
 }
 
 userandrole();
+
+function practice(){
+    
+}
