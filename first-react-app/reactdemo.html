@@ -4,8 +4,7 @@
         <title>React Demo</title>
         <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous" referrerpolicy="no-referrer"
-></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js" integrity="sha512-kp7YHLxuJDJcOzStgd6vtpxr4ZU9kjn77e6dBsivSz+pUuAuMlE2UTdKB7jjsWT84qbS8kdCWHPETnP/ctrFsA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
     </head>
@@ -13,17 +12,31 @@
         <div id="box1"> </div>
         
         <script type="text/babel">    
+
+        const age=80;
+        const name="Mahendra";
         // const header= <h1>Hello</h1>  // single line JSX
             const header= (
-                    
+            
             <div>
-                <h1>Hello</h1>        
+                <h1>Hello my age is {age}</h1>   
+                <h1>My name is {name}</h1>
                 <h2>Hi h2</h2>
 
             </div>
 
             )
             // multi line JSX
+            const main=(
+                <div> 
+                   Main Section 
+                   <ul>
+                    <li>home</li>
+                    <li>aboutus</li>
+                    <li>contact us</li>
+                    </ul>
+                </div>
+            )
             const footer=(
 
                <div>
@@ -35,7 +48,7 @@
 
                 <div>
                   {header}
-                  {header}
+                  {main}
                   {footer}
                 </div>
 
