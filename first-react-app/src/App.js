@@ -1,5 +1,5 @@
 import Header from './Header';
-import User from './User';
+//import User from './User';
 import Employee from './Employee';
 import EmployeeWithFunction from './EmployeeWithFunction';
 import Company from './Company';
@@ -8,7 +8,8 @@ import {user, sayHi} from './ModuleDemo';
 import * as u from './ModuleDemo';
 import sayHello from './ModuleDemo';
 import ToDo from './ToDo';
-
+import User from './components/User';
+import Article from './components/Article';
 function App() {
 
   let msg="hello good morning";
@@ -78,6 +79,7 @@ sayHello();
   return (
     
     <div className="App">
+      
       {/* <Header/>                                     
       <Header/>
       <User name="Mahendra" type="text"/>
@@ -85,7 +87,9 @@ sayHello();
       <EmployeeWithFunction/>
       <Company Companyname="Careerx"/>
       <Employee experience="five years"/> */}
-      <ToDo/>
+      {/* <ToDo/> */}
+      {/* <User/> */}
+      <Article/>
     </div>
     
   );

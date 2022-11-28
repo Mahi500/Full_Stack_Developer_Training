@@ -36,7 +36,7 @@
       </tr>
       <tbody id="mainData"></tbody>
     </table>
-    <a href="https://google.com" onclick="navigate()">google</a>
+    <a href="https://google.com" onclick="navigate()" style="text-decoration:none;">google </a>
   </body>
   <script>
     var isUpdate = false;
@@ -69,6 +69,7 @@
                     <button onclick="updateData(this)">update</button></td>
                 </tr>
             `;
+            console.log(tableData.innerHTML);
     }
 
     function reset() {
@@ -84,14 +85,23 @@
     }
 
     function deleteData(self) {
+      
+      console.log(self.parentElement.parentElement);
       self.parentElement.parentElement.remove();
     }
 
     function updateData(self) {
       isUpdate = true;
       selectedparent  = self.parentElement.parentElement;
+      console.log(selectedparent);
+      //value=self.parentElement.parentElement.textContent;
+      console.log(self.parentElement.parentElement.textContent);
       values = self.parentElement.parentElement.textContent.split("\n");
+      console.log(values);
       document.getElementById("fname").value = values[1].trim();
+      console.log(values[1]);
+      time= values[1].trim();
+      console.log(time);
       document.getElementById("lname").value = values[2].trim();
       document.getElementById("age").value = values[3].trim();
     }

@@ -15,20 +15,21 @@ class ToDo extends React.Component{
     
     
     saveCourse(){
-       
-       
-       const list = [...this.state.list];
-       list.push(this.state.courseName);
-       this.setState({list:list});
-       this.state.courseName="";
 
+      let Data=document.getElementById("ToDo");
+      Data.innerHTML= Data.innerHTML + this.state.courseName +`<br/>`;
+      document.getElementById("save").value=" "; 
+    //    const list = this.state.list;
+    //    list.push(this.state.courseName);
+    //    this.setState({list:list});
+     // this.state.courseName="";
        
     }
     
 
     handleChange(event){
-       this.setState({courseName:event.target.value})
-             
+       this.setState({courseName:event.target.value});
+      
     }
     
     render(){
@@ -37,17 +38,20 @@ class ToDo extends React.Component{
         return(
             
             <div>
-                <input type="text" value={this.state.courseName} onChange={this.handleChange} placeholder="enter item"/>
+                <h1>ToDo List</h1>
+                <input type="text" id="save" value={this.state.courseName} onChange={this.handleChange} placeholder="enter item"/>
                 <button onClick={this.saveCourse}>Save</button>
                 <div>
-                 <h1>ToDo List</h1>
-                 <ul>
+                 
+                 {/* <ul>
                     <li>{this.state.list[0]}</li>
                     <li>{this.state.list[1]}</li>
                     <li>{this.state.list[2]}</li>
                     <li>{this.state.list[3]}</li>
                     <li>{this.state.list[4]}</li>
-                 </ul>
+                 </ul> */}
+                 {/* <h1>{this.state.list}</h1> */}
+                 <h1 id="ToDo"> </h1>
                 </div>
             </div>
         
