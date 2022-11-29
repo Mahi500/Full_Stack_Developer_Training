@@ -16,13 +16,14 @@ class ToDo extends React.Component{
     
     saveCourse(){
 
-      let Data=document.getElementById("ToDo");
-      Data.innerHTML= Data.innerHTML + this.state.courseName +`<br/>`;
-      document.getElementById("save").value=" "; 
-    //    const list = this.state.list;
-    //    list.push(this.state.courseName);
-    //    this.setState({list:list});
-     // this.state.courseName="";
+    //   let Data=document.getElementById("ToDo");
+    //   Data.innerHTML= Data.innerHTML + this.state.courseName +`<br/>`;
+    //   document.getElementById("save").value=" "; 
+       const list = this.state.list;
+       list.push(this.state.courseName);
+       this.setState({list:list});
+       this.state.courseName="";
+
        
     }
     
@@ -51,7 +52,14 @@ class ToDo extends React.Component{
                     <li>{this.state.list[4]}</li>
                  </ul> */}
                  {/* <h1>{this.state.list}</h1> */}
-                 <h1 id="ToDo"> </h1>
+                 {/* <h1 id="ToDo"> </h1> */}
+                 {
+                    this.state.list.map((item)=>{
+                       
+                        return <div>{item}</div>
+                    })
+                 }
+
                 </div>
             </div>
         
