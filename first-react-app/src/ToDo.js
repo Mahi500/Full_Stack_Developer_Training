@@ -16,9 +16,7 @@ class ToDo extends React.Component{
     
     saveCourse(){
 
-    //   let Data=document.getElementById("ToDo");
-    //   Data.innerHTML= Data.innerHTML + this.state.courseName +`<br/>`;
-    //   document.getElementById("save").value=" "; 
+       
        const list = this.state.list;
        list.push(this.state.courseName);
        this.setState({list:list});
@@ -44,19 +42,12 @@ class ToDo extends React.Component{
                 <button onClick={this.saveCourse}>Save</button>
                 <div>
                  
-                 {/* <ul>
-                    <li>{this.state.list[0]}</li>
-                    <li>{this.state.list[1]}</li>
-                    <li>{this.state.list[2]}</li>
-                    <li>{this.state.list[3]}</li>
-                    <li>{this.state.list[4]}</li>
-                 </ul> */}
-                 {/* <h1>{this.state.list}</h1> */}
-                 {/* <h1 id="ToDo"> </h1> */}
+                 
                  {
                     this.state.list.map((item)=>{
                        
                         return <div>{item}</div>
+
                     })
                  }
 

@@ -10,6 +10,9 @@ import sayHello from './ModuleDemo';
 import ToDo from './ToDo';
 import User from './components/User';
 import Article from './components/Article';
+import Counter from './components/Counter';
+import Parent from './components/Parent';
+import ParentData from './components/ParentData';
 function App() {
 
   let msg="hello good morning";
@@ -87,9 +90,12 @@ sayHello();
       <EmployeeWithFunction/>
       <Company Companyname="Careerx"/>
       <Employee experience="five years"/> */}
-      <ToDo/>
+      {/* <ToDo/> */}
       {/* <User/> */}
       {/* <Article/> */}
+      {/* <Counter/> */}
+      {/* <Parent/> */}
+      <ParentData/>
     </div>
     
   );
