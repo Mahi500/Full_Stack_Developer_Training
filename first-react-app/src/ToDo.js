@@ -35,10 +35,23 @@ class ToDo extends React.Component {
 
         let li =[];
         li=this.state.list;
-
-       let lis=list.filter(item =>!(item.index===id));
+        let lis=[];
+        lis=li.filter(item =>!(item.index===id));
 
         this.setState({list:lis})
+    }
+
+    change(id,e){
+
+        const list=[];
+
+        list= this.state.list;
+
+        list[id]=e.target.value;
+
+        this.setState({list:list})
+
+
     }
 
     render() {
@@ -58,9 +71,9 @@ class ToDo extends React.Component {
 
                             return (<div>
                                      {item} 
-                                    <button onClick={this.delete({index})}> Delete </button> 
+                                    <button onClick={this.delete(index)}> Delete </button> 
                             
-                                    <button>Update</button>
+                                    <button onClick={this.change(index)}>Update</button>
 
 
                                      
