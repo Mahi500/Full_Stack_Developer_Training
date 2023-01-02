@@ -7,7 +7,7 @@ function Userpage(){
 
         fetch("http://localhost:5000/users").then(function(res){
           
-        
+        //  var emp=res;
         return res.json();
 
         }).then(function(result){

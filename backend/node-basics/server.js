@@ -1,6 +1,6 @@
 const http= require("http");
-
-
+// node basic -http module
+const fs=require("fs");
 var users=[
 
     {  name:"Mahendra",
@@ -15,6 +15,27 @@ var users=[
     }
 
     ]
+
+    // function show(){
+
+    //     console.log("I am in show function");
+    // }
+    
+    // show();
+    // setTimeout(function(){
+
+    //     console.log("Inside set time out");
+
+    // }
+
+    // ,1000)
+    // setInterval(function(){
+
+    //     console.log("Inside set time out");
+
+    // }
+
+    // ,1000)
 var server = http.createServer(function(req,res){
 
     const headers={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods':'GET,POST'};
@@ -43,6 +64,12 @@ var server = http.createServer(function(req,res){
         res.writeHead(200,headers);
         res.end(JSON.stringify(users));
 
+    }
+    else if(req.url=='/employee'){
+         
+       var data= fs.readFileSync("emp.js","utf-8");
+       res.writeHead(200,headers);
+       res.end(JSON.stringify(data));
     }
     else{
         // res.writeHead(400,{content:"application/text"},headers);
