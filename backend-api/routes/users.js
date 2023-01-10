@@ -37,7 +37,7 @@ router.get("/user/:id",function(req,res){
 
 
 router.post("/create",function(req,res){
-     console.log()
+     console.log(req.body);
     const {id,name,age,phone}= req.body;
     users.push({id,name,age,phone});
     res.send("user created successfully");
@@ -63,15 +63,15 @@ router.put("/update/:id",function(req,res){
         if(item.id===Number(req.params.id))
         {
 
-            item.name="";
-            item.age="";
-            item.phone="";
+            item.name=req.body.name;
+            item.age=req.body.age;
+            item.phone=req.body.phone;
         }
 
 
     })
 
-    console.log("user updated successfully");
+    res.send("user updated successfully");
 
 
 })

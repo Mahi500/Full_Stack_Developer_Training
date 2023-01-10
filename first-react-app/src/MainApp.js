@@ -6,6 +6,7 @@ import StudentPage from './Pages/StudentPage';
 import Header from './Pages/Header';
 import StudentList from './Pages/StudentList';
 import Userpage from './Pages/Userpage';
+import UsersCrud from './Pages/UsersCrud';
 
 function MainApp(){
 
@@ -24,6 +25,7 @@ function MainApp(){
             <Route path="/student" element={<StudentPage/>}></Route>
             <Route path="/studentlist" element={<StudentList/>}></Route>
             <Route path="/users" element={<Userpage/>}></Route>
+            <Route path="/userscrud" element={<UsersCrud/>}></Route>
            </Routes>
            </BrowserRouter>
         </div>

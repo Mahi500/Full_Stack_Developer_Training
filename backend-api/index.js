@@ -1,7 +1,16 @@
 const express=require("express");
 const bodyParser=require("body-parser");
+//const cors=require("cors");
 var app=express();
 var port=5000;
+//app.use(cors());
+app.use(function(req,res){
+
+    res.header("Access-Control-Allow-Origin","*");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE");
+    res.header("Access-Control-Allow-Headers","Origin,Content-Range,X-Content-Range,Accept");
+
+})
 var users= require('./routes/users');
 
 
