@@ -36,6 +36,9 @@ function Header() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/userscrud">Users Crud</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/usersearchpage">Users Search</Link>
+                            </li>
                              
                         </ul>
                     </div>

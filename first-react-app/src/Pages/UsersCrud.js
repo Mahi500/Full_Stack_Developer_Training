@@ -46,7 +46,7 @@ function UsersCrud() {
     console.log(user);
     event.preventDefault();
     if (isEdit) {
-      fetch(`http://localhost:5000/users/${user.id}/update`, {
+      fetch(`http://localhost:5000/users/update/${user.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -86,14 +86,14 @@ function UsersCrud() {
 
   const deleteUser = (user) => {
     console.log("user to be deleted =", user);
-    let tempusers = users;
-    tempusers.filter(function (item) {
-      return item.id != user.id;
-    });
-    console.log(tempusers);
-    setUsers(tempusers);
+    // let tempusers = users;
+    // tempusers.filter(function (item) {
+    //   return item.id != user.id;
+    // });
+    // console.log(tempusers);
+    // setUsers(tempusers);
 
-    fetch(`http://localhost:5000/users/delete/:${user.id}`, {method:"delete"}).then(function(res){
+    fetch(`http://localhost:5000/users/delete/${user.id}`, {method:"delete"}).then(function(res){
         console.log("user deleted successfully");
         getUsersFromServer();
      })
@@ -101,11 +101,8 @@ function UsersCrud() {
 
   const editUser = (user) => {
     console.log("clicked user=", user);
-    //   setUser((prev)=>({
-    //     ...prev,
-    //     ...user
-    // }))
-    setUser(user);
+    
+    setUser(user); // populating the user objects in fields
     setIsEdit(true);
   };
 
@@ -187,13 +184,13 @@ function UsersCrud() {
                 <td>{user.phone}</td>
                 <td>
                   <button
-                    onClick={() => deleteUser(user)}
+                    onClick={(user) => deleteUser(user)}
                     className="btn btn-danger"
                   >
                     delete
                   </button>
                   <button
-                    onClick={() => editUser(user)}
+                    onClick={(user) => editUser(user)}
                     className="btn btn-primary"
                   >
                     edit

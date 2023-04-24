@@ -7,6 +7,7 @@ import Header from './Pages/Header';
 import StudentList from './Pages/StudentList';
 import Userpage from './Pages/Userpage';
 import UsersCrud from './Pages/UsersCrud';
+import UserSearchPage from "./Pages/UserSearchPage";
 
 function MainApp(){
 
@@ -26,6 +27,7 @@ function MainApp(){
             <Route path="/studentlist" element={<StudentList/>}></Route>
             <Route path="/users" element={<Userpage/>}></Route>
             <Route path="/userscrud" element={<UsersCrud/>}></Route>
+            <Route path="/usersearchpage" element={<UserSearchPage/>}></Route>
            </Routes>
            </BrowserRouter>
         </div>

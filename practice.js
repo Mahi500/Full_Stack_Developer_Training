@@ -57,8 +57,8 @@ function getUsersandtheirrolespromise(){
         RoleDb().then(function(res){
             console.log("roles fetched:", res);
             print(res);
-        })
-    })
+        }).catch(function(err){console.log(err);})
+    }).catch(function(err){console.log(err);})
 
 }
 

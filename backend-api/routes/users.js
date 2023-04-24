@@ -48,7 +48,7 @@ router.delete("/delete/:id",function(req,res){
       console.log(req.params.id);
     let filteredUsers=users.filter(function(item){
 
-        return item.id!==Number(req.params.id);
+        return Number(item.id)!==Number(req.params.id);
     })
 
     users=[...filteredUsers];
@@ -60,7 +60,7 @@ router.put("/update/:id",function(req,res){
 
     users.map(function(item,index){
 
-        if(item.id===Number(req.params.id))
+        if(Number(item.id)===Number(req.params.id))
         {
 
             item.name=req.body.name;

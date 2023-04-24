@@ -1,9 +1,16 @@
 const express=require("express");
 const bodyParser=require("body-parser");
+const mongoose=require("mongoose");
 //const cors=require("cors");
 var app=express();
 var port=5000;
 //app.use(cors());
+
+mongoose.connect("mongodb://localhost:27017/training_db")
+
+
+
+
 app.use(function(req,res){
 
     res.header("Access-Control-Allow-Origin","*");
@@ -13,10 +20,13 @@ app.use(function(req,res){
 })
 var users= require('./routes/users');
 
+var users= require('./routes/employee');
+
 
 var jsonParser=bodyParser.json();
 app.use(bodyParser.json({type: 'application/*+json'}))
 app.use("/users",jsonParser,users);      // jsonparser is a middleware function
+app.use("/employee",jsonParser,employee);
 app.listen(port,function(){
     console.log(`server is running on ${port}`);
 })
