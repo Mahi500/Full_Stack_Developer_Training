@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 var usersdata = [
 
     {
@@ -33,28 +33,43 @@ function UserSearchPage() {
     const [searchkey,setSearchkey]= useState("");
     const [name,setName]=useState("");
     const [id,setId]=useState("");
+
+    // useEffect(()=>{
+
+    //     usersdata.push({id:8,name:"Lokesh"});
+    // },[])
     
     const searchUser=(e)=>{
         console.log(e.target.value);
-        setSearchkey(e.target.value);
+        setSearchkey(e.target.value);    // setsearchkey taking time to update
+        filteredUsers(e.target.value);
+        console.log(searchkey);
+    }
 
+
+    const filteredUsers=(searchkey)=>{
+
+        console.log(searchkey);
         if(searchkey){
 
-        const filteredUsers= users.filter((user)=>{
+            const filterUsers= users.filter((user)=>{
+    
+                    return user.name.toLowerCase().includes(searchkey.toLowerCase());
+    
+    
+                })
+    
+                setUsers(filterUsers);   //
+    
+    
+            }
+            else{
+    
+                setUsers(usersdata);
+            }
 
-                return user.name.toLowerCase().includes(searchkey.toLowerCase());
-
-
-            })
-
-            setUsers(filteredUsers);
-
-
-        }
-        else{
-
-            setUsers(usersdata);
-        }
+       
+            
     }
     
     const deleteuser=(data)=>{
@@ -98,7 +113,7 @@ function UserSearchPage() {
                 <div className="row">
                     <div className="input-group mb-3">
                         <input type="text" className="form-control" placeholder="Search User" value={searchkey} onChange={(e)=>searchUser(e)}/>
-                            <span className="input-group-text" id="basic-addon2" style={{"background":"green","color":"#fff"}}>Search</span>
+                            <button><span className="input-group-text" id="basic-addon2" style={{"background":"green","color":"#fff"}} onClick={(e)=>searchUser(e)}>Search</span></button>
                             {/* <span className="input-group-text" id="basic-addon2" style={{"background":"green","color":"#fff"}} onChange={filtereduser}>Search</span> */}
                     </div>
 

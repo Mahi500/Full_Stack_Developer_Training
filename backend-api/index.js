@@ -6,6 +6,8 @@ var app=express();
 var port=5000;
 //app.use(cors());
 
+
+//mongodb connection
 mongoose.connect("mongodb://localhost:27017/training_db")
 
 
@@ -20,7 +22,7 @@ app.use(function(req,res){
 })
 var users= require('./routes/users');
 
-var users= require('./routes/employee');
+var employee= require('./routes/employee');
 
 
 var jsonParser=bodyParser.json();
