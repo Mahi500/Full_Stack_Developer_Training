@@ -8,6 +8,7 @@ import StudentList from './Pages/StudentList';
 import Userpage from './Pages/Userpage';
 import UsersCrud from './Pages/UsersCrud';
 import UserSearchPage from "./Pages/UserSearchPage";
+import Pagination from './components/Pagination';
 
 function MainApp(){
 
@@ -21,13 +22,14 @@ function MainApp(){
            <BrowserRouter>
            <Header/>
            <Routes>
-            <Route path="/employee" element={<EmployeePage/>}></Route>
+            {/* <Route path="/employee" element={<EmployeePage/>}></Route>
             <Route path="/course" element={<CoursePage/>}></Route>
             <Route path="/student" element={<StudentPage/>}></Route>
             <Route path="/studentlist" element={<StudentList/>}></Route>
             <Route path="/users" element={<Userpage/>}></Route>
             <Route path="/userscrud" element={<UsersCrud/>}></Route>
-            <Route path="/usersearchpage" element={<UserSearchPage/>}></Route>
+            <Route path="/usersearchpage" element={<UserSearchPage/>}></Route> */}
+            <Route path="/pagination" element={<Pagination/>}></Route>
            </Routes>
            </BrowserRouter>
         </div>

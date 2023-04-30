@@ -39,6 +39,9 @@ function Header() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/usersearchpage">Users Search</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/pagination">Pagination</Link>
+                            </li>
                              
                         </ul>
                     </div>
