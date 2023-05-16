@@ -42,6 +42,9 @@ function Header() {
                             <li className="nav-item">
                                 <Link className="nav-link" to="/pagination">Pagination</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link" to="/selectbox">SelectBoxes</Link>
+                            </li>
                              
                         </ul>
                     </div>

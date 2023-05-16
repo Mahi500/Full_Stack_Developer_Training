@@ -9,6 +9,7 @@ import Userpage from './Pages/Userpage';
 import UsersCrud from './Pages/UsersCrud';
 import UserSearchPage from "./Pages/UserSearchPage";
 import Pagination from './components/Pagination';
+import SelectBoxes from './components/SelectBoxes';
 
 function MainApp(){
 
@@ -30,6 +31,7 @@ function MainApp(){
             <Route path="/userscrud" element={<UsersCrud/>}></Route>
             <Route path="/usersearchpage" element={<UserSearchPage/>}></Route> */}
             <Route path="/pagination" element={<Pagination/>}></Route>
+            <Route path="/selectbox" element={<SelectBoxes/>}></Route>
            </Routes>
            </BrowserRouter>
         </div>

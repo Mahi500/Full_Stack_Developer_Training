@@ -59,6 +59,7 @@ function Pagination(){
     const [currentPage,setCurrentPage]=useState(1);
     const [usersPerPage,setUsersPerPage]=useState(3);
     const totalPages=Math.ceil(users.length/usersPerPage);
+    
     const indexOfLastUser=currentPage*usersPerPage;   // last user for that page only, according to list this value is ok,it is not array index
     const indexOfFirstUser=indexOfLastUser-usersPerPage; // index of array
 
