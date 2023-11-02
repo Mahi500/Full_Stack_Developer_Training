@@ -13,6 +13,11 @@ import Article from './components/Article';
 import Counter from './components/Counter';
 import Parent from './components/Parent';
 import ParentData from './components/ParentData';
+import Form from './components/functionalcomponents/Form';
+import UseEffectHook from './components/hooks/UseEffect';
+import MenuItem from './components/hooks/PropsDrilling';
+import Context from './components/hooks/UseContext';
+import UseReducer from './components/hooks/UseReducerDemo';
 function App() {
 
   let msg="hello good morning";
@@ -90,12 +95,17 @@ sayHello();
       <EmployeeWithFunction/>
       <Company Companyname="Careerx"/>
       <Employee experience="five years"/> */}
-      <ToDo/>
+      {/* <ToDo/> */}
       {/* <User/> */}
       {/* <Article/> */}
       {/* <Counter/> */}
       {/* <Parent/> */}
       {/* <ParentData/> */}
+      {/* <Form/> */}
+      {/* <UseEffectHook/> */}
+      {/* <MenuItem/> */}
+      {/* <Context/> */}
+      <UseReducer/>
     </div>
     
   );
