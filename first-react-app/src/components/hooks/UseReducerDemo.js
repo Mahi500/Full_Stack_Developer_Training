@@ -34,12 +34,13 @@ function UseReducerHookDemo(){
 
         dispatch({type:'DECREMENT'})
     }
+
     return(
         
         <div>
         <h2>{state.count}</h2>
-        <button onClick={()=>Increment()}>INCREMENT</button>
-        <button onClick={()=>Decrement()}>DECREMENT</button>
+        <button type="button" className="btn btn-primary" onClick={()=>Increment()}>INCREMENT</button>
+        <button type="button" className="btn btn-secondary"onClick={()=>Decrement()}>DECREMENT</button>
         </div>
         
         )

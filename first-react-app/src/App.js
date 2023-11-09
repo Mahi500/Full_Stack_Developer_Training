@@ -18,6 +18,7 @@ import UseEffectHook from './components/hooks/UseEffect';
 import MenuItem from './components/hooks/PropsDrilling';
 import Context from './components/hooks/UseContext';
 import UseReducer from './components/hooks/UseReducerDemo';
+import UseRefDemo from './components/hooks/useRefDemo';
 function App() {
 
   let msg="hello good morning";
@@ -106,6 +107,7 @@ sayHello();
       {/* <MenuItem/> */}
       {/* <Context/> */}
       <UseReducer/>
+      <UseRefDemo/>
     </div>
     
   );
