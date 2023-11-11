@@ -14,7 +14,7 @@ root.render(
 
     <Provider store={store}>
      
-     <MainApp/>
+     <App/>
 
     </Provider>
 

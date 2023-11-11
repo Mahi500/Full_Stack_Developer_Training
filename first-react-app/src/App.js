@@ -19,6 +19,9 @@ import MenuItem from './components/hooks/PropsDrilling';
 import Context from './components/hooks/UseContext';
 import UseReducer from './components/hooks/UseReducerDemo';
 import UseRefDemo from './components/hooks/useRefDemo';
+import UseCallback from './components/hooks/UseCallback';
+import Usememo from './components/hooks/UseMemo';
+import Memo from './components/hooks/Memo';
 function App() {
 
   let msg="hello good morning";
@@ -106,8 +109,11 @@ sayHello();
       {/* <UseEffectHook/> */}
       {/* <MenuItem/> */}
       {/* <Context/> */}
-      <UseReducer/>
-      <UseRefDemo/>
+      {/* <UseReducer/>
+      <UseRefDemo/> */}
+      {/* <UseCallback/>
+      <Usememo/> */}
+      <Memo/>
     </div>
     
   );
